@@ -1,5 +1,6 @@
 package SDA;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +43,14 @@ public class Dictionary {
 
 
         }
+        public List<String> search ( String fraza){
+        List<String> correctKeys = new ArrayList<>();
+        for(String key: dictionary.keySet()){
+            if(key.contains(fraza)){
+                correctKeys.add(key);
+            }
+        }
+     return correctKeys;}
 //        public Map<String, String> getFullList(){
 //        return dictionary;
 //        }

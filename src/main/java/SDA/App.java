@@ -80,6 +80,8 @@ public class App {
 
         System.out.println("\n");
 //        System.out.println(engDictionary.getFullList());
+
+        System.out.println(engDictionary.search("p"));
     }
 }
 

@@ -28,8 +28,8 @@ public class App
 
         UserService service = new UserService();
 
-//        service.addUser(user1);
-//        service.addUser(user2);
+        service.addUser(user1);
+        service.addUser(user2);
 //        service.printAll();
 
         List<Integer> liczby = new ArrayList<>();
@@ -40,12 +40,27 @@ public class App
             System.out.println(liczba);
         }
 
-        List<User> user = new ArrayList<>();
-        user.add(user1);
-        user.add(user2);
 
-        for (User dane:user){
-            System.out.println(dane);}
-        System.out.println("cos");
+//        user.add(user1);
+//        user.add(user2);
+
+//        for (User dane:user){
+//            System.out.println(dane);}
+        System.out.println("\n");
+
+        service.printAll();
+
+
+        System.out.println("\n\n");
+
+
+        Dictionary engDictionary = new Dictionary ();
+        engDictionary.addTranslation("piłka","ball");
+        engDictionary.addTranslation("laptop","laptop");
+        engDictionary.addTranslation("telefon","mobile phone");
+        engDictionary.addTranslation("pies","dog");
+        engDictionary.addTranslation("kubek","cup");
+
+        System.out.println(engDictionary.getTranslation("piłka"));
     }}
 

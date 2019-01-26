@@ -47,4 +47,14 @@ public class User {
     public void setHaslo(String haslo) {
         this.haslo = haslo;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", login='" + login + '\'' +
+                ", haslo='" + haslo + '\'' +
+                '}';
+    }
 }

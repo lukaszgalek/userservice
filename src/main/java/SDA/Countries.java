@@ -14,9 +14,9 @@ public class Countries {
         }
 }
 
-    public void getStolica( String kraj){
+    public void getStolica( String stolica){
         for( Country country : countries) {
-            if(country.getStolica().equals(kraj)){
+            if(country.getStolica().equals(stolica)){
                 System.out.println(country);
             }
         }

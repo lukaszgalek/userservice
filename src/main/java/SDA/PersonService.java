@@ -1,9 +1,6 @@
 package SDA;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 public class PersonService {
     private Map<Integer, User >personService = new HashMap<>();
@@ -16,6 +13,21 @@ private static  int id ;
        personService.put(++this.id,user);
 //               id++;
    }
+
+
+//
+//   public List<User> getYounger (){
+//      List<User> tempList= new ArrayList<>();
+//       for(temp:tempList){
+//           if (()
+
+
+//       if (liczba < 18){
+//           for(younger:personService)
+//               if()
+
+
+
 
 
    public void usunUser(int id){

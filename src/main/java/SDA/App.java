@@ -107,8 +107,15 @@ public class App {
         System.out.println(personService.getUserbyId(3));
 
         System.out.println(user1.getAge());
+        System.out.println("\n----------------------------------\n");
+Countries kraj = new Countries();
 
+kraj.getCountries();
+kraj.addCountry("Szwecja");
 
+        System.out.println("\n");
+
+kraj.getCountries();
     }
 }
 

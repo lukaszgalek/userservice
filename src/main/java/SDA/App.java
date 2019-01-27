@@ -1,5 +1,6 @@
 package SDA;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +10,9 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        User user1 = new User("lukas", "galek", "mail", "jakies haslo");
-        User user2 = new User("krzysiek", "zdzisiek", "mail2", "jakies cos");
+        User user1 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(2003,01,28));
+        User user3 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(1990,12,12));
+        User user2 = new User("krzysiek", "zdzisiek", "mail2", "jakies cos", LocalDate.parse("1991-12-12"));
 //        User user1 = new User();
         // System.out.println(user1.getImie());
 //       user1.setImie("lukas");
@@ -82,6 +84,31 @@ public class App {
 //        System.out.println(engDictionary.getFullList());
 
         System.out.println(engDictionary.search("p"));
+
+
+        //-----------------------------------------------------------
+        System.out.println(user1.getDataUro());
+        System.out.println(user2.getDataUro());
+
+        System.out.println(user1.isAdult());
+
+        PersonService personService= new PersonService();
+        personService.addUser(user1);
+        personService.addUser(user2);
+        personService.addUser(user3);
+        System.out.println(personService.getUserbyId(1));
+//personService.usunUser(1);
+//        System.out.println(personService.getUserbyId(1));
+        user1.setHaslo("cosinnego");
+        user2.setHaslo("inne ");
+        personService.modyfikacje(3,user3);
+        System.out.println(personService.getUserbyId(1));
+        System.out.println(personService.getUserbyId(2));
+        System.out.println(personService.getUserbyId(3));
+
+        System.out.println(user1.getAge());
+
+
     }
 }
 

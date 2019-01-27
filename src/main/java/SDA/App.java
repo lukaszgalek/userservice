@@ -116,6 +116,19 @@ kraj.addCountry("Szwecja");
         System.out.println("\n");
 
 kraj.getCountries();
+        System.out.println("\n");
+kraj.addCountry("Polska");
+        System.out.println("\n");
+kraj.getCountries();
+
+kraj.removeCountry("Niemcy");
+
+        System.out.println("\n");
+        kraj.getCountries();
+        System.out.println("\n");
+        kraj.updateCountry("Polska","POLSKA");
+
+        kraj.getCountries();
     }
 }
 

@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        User user1 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(2003,01,28));
-        User user3 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(1990,12,12));
+        User user1 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(2003, 01, 28));
+        User user3 = new User("lukas", "galek", "mail", "jakies haslo", LocalDate.of(1990, 12, 12));
         User user2 = new User("krzysiek", "zdzisiek", "mail2", "jakies cos", LocalDate.parse("1991-12-12"));
 //        User user1 = new User();
         // System.out.println(user1.getImie());
@@ -92,7 +92,7 @@ public class App {
 
         System.out.println(user1.isAdult());
 
-        PersonService personService= new PersonService();
+        PersonService personService = new PersonService();
         personService.addUser(user1);
         personService.addUser(user2);
         personService.addUser(user3);
@@ -101,34 +101,46 @@ public class App {
 //        System.out.println(personService.getUserbyId(1));
         user1.setHaslo("cosinnego");
         user2.setHaslo("inne ");
-        personService.modyfikacje(3,user3);
+        personService.modyfikacje(3, user3);
         System.out.println(personService.getUserbyId(1));
         System.out.println(personService.getUserbyId(2));
         System.out.println(personService.getUserbyId(3));
 
         System.out.println(user1.getAge());
         System.out.println("\n----------------------------------\n");
-Countries kraj = new Countries();
+        Countries kraj = new Countries();
 
-kraj.getCountries();
-kraj.addCountry("Szwecja");
+//        kraj.getCountries();
+//        kraj.addCountry("Szwecja");
+//
+//        System.out.println("\n");
+//
+//        kraj.getCountries();
+//        System.out.println("\n");
+//        kraj.addCountry("Polska");
+//        System.out.println("\n");
+//        kraj.getCountries();
+//
+//        kraj.removeCountry("Niemcy");
+//
+//        System.out.println("\n");
+//        kraj.getCountries();
+//        System.out.println("\n");
+//        kraj.updateCountry("Polska", "POLSKA");
+//
+//        kraj.getCountries();
 
-        System.out.println("\n");
+        //---------------------------------2 etap
 
-kraj.getCountries();
-        System.out.println("\n");
-kraj.addCountry("Polska");
-        System.out.println("\n");
-kraj.getCountries();
-
-kraj.removeCountry("Niemcy");
-
-        System.out.println("\n");
-        kraj.getCountries();
-        System.out.println("\n");
-        kraj.updateCountry("Polska","POLSKA");
-
-        kraj.getCountries();
+        Country polska = new Country("Polska", "Warszawa", 3700);
+        Country niemcy = new Country("Niemcy", "Berlin", 40000);
+        Country irlandia = new Country("Irlandia", "Dublin", 50000);
+Countries kraje = new Countries();
+kraje.addCountry(polska);
+kraje.addCountry(niemcy);
+kraje.addCountry(irlandia);
+        kraje.getCountry("Niemcy");
+        kraje.getStolica("Warszawa");
     }
 }
 

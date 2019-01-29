@@ -141,6 +141,22 @@ kraje.addCountry(niemcy);
 kraje.addCountry(irlandia);
         kraje.getCountry("Niemcy");
         kraje.getStolica("Warszawa");
+        System.out.println("--------------------------------------Kolejka---------------------\n\n");
+
+        Shop shop = new Shop();
+//        shop.addClient("pierwszy");
+//        shop.addClient("drugi");
+//        shop.addClient("trzeci");
+//        shop.addClient("czwarty");
+Person person = new Person("jan","nowak",34);
+Person person2 = new Person("seba","dres",10);
+
+        shop.wyswietl();
+        shop.serveCustomer();
+        shop.wyswietl();
+        System.out.println(person.getImie());
+        shop.addClient(person2);
+
     }
 }
 
